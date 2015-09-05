@@ -1,0 +1,32 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Grow the web with referrals!</h1>
+    <div referral-form></div>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table-hover referral-links">
+        <thead>
+          <tr>
+            <th><a href="#" ng-click="sortOrder('link')">Link title</a></th>
+            <th><a href="#" ng-click="sortOrder('clicks')">Clicks</a></th>
+            <th><!-- intentionally left empty --></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="referral in referrals | orderBy:predicate:reverse">
+            <td class="col-md-8">
+              <a href="#" editable-text="referral.link" onbeforesave="editReferral(referral, $data)" title="Edit referral">{{ referral.link | hyphenate : "empty" }}</a>
+              <a href="/{{referral.link | hyphenate}}" class="fa fa-external-link" target="_blank" title="View referral"><span class="visually-hidden">View link</span></a>
+            </td>
+            <td class="col-md-2">{{referral.clicks}}</td>
+            <td class="col-md-2"><a href="#" ng-click="deleteReferral(referral)" title="Delete referral"><i class="fa fa-trash-o"><span class="visually-hidden">Trash it</span></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
