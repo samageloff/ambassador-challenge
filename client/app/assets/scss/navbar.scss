@@ -1,0 +1,59 @@
+.navbar {
+  border: 0;
+}
+
+.navbar-inner {
+  background-color: $color-steel;
+}
+
+.navbar .brand,
+.navbar .nav > li > a {
+  background: $color-steel;
+  color: $color-midnight;
+  text-shadow: 0;
+}
+
+.navbar .brand:hover,
+.navbar .nav > li > a:hover,
+.navbar .brand:focus,
+.navbar .nav > li > a:focus {
+  color: $color-steel;
+  background: $color-midnight;
+  text-decoration: none;
+}
+
+.navbar .brand {
+  color: $color-brand;
+}
+
+.navbar .navbar-text {
+  color: $color-midnight;
+}
+
+.navbar .nav > li > a:focus,
+.navbar .nav > li > a:hover {
+  background: $color-midnight;
+  color: $color-steel;
+}
+
+.navbar .nav .active > a,
+.navbar .nav .active > a:hover,
+.navbar .nav .active > a:focus {
+  color: $color-steel;
+  text-decoration: none;
+  background: $color-midnight;
+}
+
+.navbar .navbar-link {
+  color: $color-midnight;
+}
+
+.navbar .navbar-link:hover,
+.navbar .navbar-link:focus {
+  color: $color-gesso;
+}
+
+.navbar .divider-vertical {
+  border-right-color: $color-midnight;
+  border-left-color: $color-midnight;
+}

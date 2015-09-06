@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('ambassadorApp')
-  .controller('MainCtrl', function($scope, $http, $filter) {
+  .controller('MainCtrl', function($scope, $http, $filter, $location) {
 
     // Empty array to hold referrals
     $scope.referrals = [];
 
     // For sort/filtering: to be used for selecting items from array.
     $scope.predicate = 'link';
-    $scope.reverse = true;
+    $scope.reverse = false;
 
     // Fetch referrals and assign the response/data to $scope.referrals
     $http.get('/api/referrals')
@@ -87,5 +87,13 @@ angular.module('ambassadorApp')
           referrals.splice(referrals.indexOf(referral), 1);
         });
     };
+
+    /**
+     * Copy a link to the clipboard the old fashioned way
+     * @param  {String} Text to copy
+     */
+    $scope.copyLink = function(text) {
+      window.prompt("Copy to clipboard: Ctrl+C, Enter", $location.absUrl() + text);
+    }
 
   });

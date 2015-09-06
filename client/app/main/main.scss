@@ -1,26 +1,3 @@
 .referral-links {
   margin-top: 2em;
-
-  thead th {
-    font-weight: bold;
-    padding: 1em;
-  }
-
-  tbody > tr > td {
-    padding: 1em;
-    font-weight: normal;
-    padding: 1em;
-    position: relative;
-  }
-}
-
-.editable-wrap {
-  position: absolute;
-  top: .5em;
-}
-
-.editable-click,
-a.editable-click {
-  border-bottom: dashed 1px #CCC;
-  color: #333;
 }

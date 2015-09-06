@@ -1,0 +1,25 @@
+body {
+  background-color: $color-brand;
+  color: $color-base-font;
+  font-family: "Fixedsys500c", Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  line-height: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 20px;
+  color: $color-alt-font;
+  text-rendering: optimizelegibility;
+}

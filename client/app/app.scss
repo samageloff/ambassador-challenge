@@ -1,34 +1,18 @@
-$icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
+// Look & feel inspired by: https://kristopolous.github.io/BOOTSTRA.386
 $fa-font-path: "../bower_components/font-awesome/fonts";
 
+// Framework
 @import '../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
 @import '../bower_components/font-awesome/scss/font-awesome';
 
-/**
- * App-wide Styles
- */
-
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 // Component styles are injected through grunt
 // injector
+@import 'assets/scss/__variables.scss';
+@import 'assets/scss/_fonts.scss';
+@import 'assets/scss/_helpers.scss';
+@import 'assets/scss/_overrides.scss';
+@import 'assets/scss/_typography.scss';
+@import 'assets/scss/navbar.scss';
 @import 'landing/landing.scss';
 @import 'main/main.scss';
 // endinjector
