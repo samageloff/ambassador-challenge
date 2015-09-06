@@ -4,7 +4,6 @@
  * and sends the update back to the server.
  */
 'use strict';
-
 angular.module('ambassadorApp')
   .factory('ClickFactory', function($http) {
     return {
