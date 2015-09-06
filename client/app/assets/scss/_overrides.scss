@@ -24,6 +24,10 @@
   top: 2px;
 }
 
+.editable-wrap {
+  z-index: 1;
+}
+
 .editable-click,
 a.editable-click {
   border-bottom: dashed 1px $color-steel;

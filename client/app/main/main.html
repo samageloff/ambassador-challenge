@@ -9,27 +9,29 @@
 
       <div referral-form></div>
 
-      <table class="table referral-links">
-        <thead>
-          <tr>
-            <th><a href="#" ng-click="sortOrder('link')">Link title</a></th>
-            <th>URL</th>
-            <th><a href="#" ng-click="sortOrder('clicks')">Clicks</a></th>
-            <th><!-- intentionally left empty --></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr ng-repeat="referral in referrals | orderBy:predicate:reverse">
-            <td class="col-md-4">
-              <a href="#" editable-text="referral.link" onbeforesave="editReferral(referral, $data)" title="Edit referral">{{ referral.link | hyphenate : "empty" }}</a>
-              <a href="/{{referral.link | hyphenate}}" target="_blank" title="View referral">&#8599; <span class="visually-hidden">View link</span></a>
-            </td>
-            <td class="col-md-4">/{{referral.link}} <a href="#" ng-click="copyLink(referral.link)">[Copy]</a></td>
-            <td class="col-md-2">{{referral.clicks}}</td>
-            <td class="col-md-2"><a href="#" ng-click="deleteReferral(referral)" title="Delete referral">[x]<span class="visually-hidden">Trash it</span></a></td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table referral-links">
+          <thead>
+            <tr>
+              <th><a href="#" ng-click="sortOrder('link')">Link title</a></th>
+              <th>URL</th>
+              <th><a href="#" ng-click="sortOrder('clicks')">Clicks</a></th>
+              <th><!-- intentionally left empty --></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="referral in referrals | orderBy:predicate:reverse">
+              <td class="col-md-4">
+                <a href="#" editable-text="referral.link" onbeforesave="editReferral(referral, $data)" title="Edit referral">{{ referral.link | hyphenate : "empty" }}</a>
+                <a href="/{{referral.link | hyphenate}}" target="_blank" title="View referral">&#8599; <span class="visually-hidden">View link</span></a>
+              </td>
+              <td class="col-md-4">/{{referral.link}} <a href="#" ng-click="copyLink(referral.link)">[Copy]</a></td>
+              <td class="col-md-2">{{referral.clicks}}</td>
+              <td class="col-md-2"><a href="#" ng-click="deleteReferral(referral)" title="Delete referral">[x]<span class="visually-hidden">Trash it</span></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>
