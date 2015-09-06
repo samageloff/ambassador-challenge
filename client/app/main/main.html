@@ -1,7 +1,12 @@
 <header class="hero-unit" id="banner">
   <div class="container">
     <h1>Grow the web with referrals!</h1>
-    <div referral-form></div>
+    <form class="referral-form form-inline" ng-submit="addReferral(referral)" novalidate>
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" ng-model="referral.link" id="link" placeholder="Add a link" required="">
+      </div>
+      <button type="submit" class="btn btn-default btn-lg">Add</button>
+    </form>
   </div>
 </header>
 
