@@ -22,11 +22,11 @@
           <tr ng-repeat="referral in referrals | orderBy:predicate:reverse">
             <td class="col-md-4">
               <a href="#" editable-text="referral.link" onbeforesave="editReferral(referral, $data)" title="Edit referral">{{ referral.link | hyphenate : "empty" }}</a>
-              <a href="/{{referral.link | hyphenate}}" class="fa fa-external-link" target="_blank" title="View referral"><span class="visually-hidden">View link</span></a>
+              <a href="/{{referral.link | hyphenate}}" target="_blank" title="View referral">&#8599; <span class="visually-hidden">View link</span></a>
             </td>
             <td class="col-md-4">/{{referral.link}} <a href="#" ng-click="copyLink(referral.link)">[Copy]</a></td>
             <td class="col-md-2">{{referral.clicks}}</td>
-            <td class="col-md-2"><a href="#" ng-click="deleteReferral(referral)" title="Delete referral"><i class="fa fa-trash-o"><span class="visually-hidden">Trash it</span></i></a></td>
+            <td class="col-md-2"><a href="#" ng-click="deleteReferral(referral)" title="Delete referral">[x]<span class="visually-hidden">Trash it</span></a></td>
           </tr>
         </tbody>
       </table>
